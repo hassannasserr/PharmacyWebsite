@@ -87,23 +87,23 @@ p a:hover {
         <div class="flex">
             <h1 class="logoany">Phrmasico</h1>
             <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="view_products.html">Products</a>
-            <a href="order.html">orders</a>
-            <a href="about.html">About us</a>
-            <a href="contact.html">Contact us</a>
+            <a href="index.php">Home</a>
+            <a href="view_products.php">Products</a>
+            <a href="order.php">orders</a>
+            <a href="about.php">About us</a>
+            <a href="contact.php">Contact us</a>
             </nav>
             <div class="icons">
                 <i class="bx bxs-user" id="user-btn"></i>
-                <a href="wishlist.html" class="card-btn"><i class="bx bx-heart"></i><sub>0</sub></a>
-                <a href="cart.html" class="card-btn"><i class="bx bx-cart-download"></i><sub>0</sub></a>
+                <a href="wishlist.php" class="card-btn"><i class="bx bx-heart"></i><sub>0</sub></a>
+                <a href="cart.php" class="card-btn"><i class="bx bx-cart-download"></i><sub>0</sub></a>
                 <i class="bx bx-list-plus" id="menu-btn" style="font-size: 2rem;"></i>
             </div>
             <div class="user-box">
                 <p>Username :Hassan Nasser Mohamed</p>
                 <p>Email :Elkashefhassan1@gmail.com</p>
-                <a href="login.html" class="btn">login</a>
-                <a href="signup.html" class="btn">signup</a>
+                <a href="login.php" class="btn">login</a>
+                <a href="signup.php" class="btn">signup</a>
                 <form action="">
                     <button type="submit" name="logout" class="logout-btn">log out</button>
                 </form>
@@ -129,7 +129,7 @@ p a:hover {
                         <input type="password" placeholder="  Password">
                     </div>
                     <button type="submit" class="btn1">Login</button>
-                    <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+                    <p>Don't have an account? <a href="signup.php">Sign up</a></p>
                 </form>
             </div>
 

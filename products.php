@@ -12,23 +12,23 @@
         <div class="flex">
             <h1 class="logoany">Phrmasico</h1>
             <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="products.html">Products</a>
-            <a href="order.html">orders</a>
-            <a href="about.html">About us</a>
-            <a href="contact.html">Contact us</a>
+            <a href="index.php">Home</a>
+            <a href="products.php">Products</a>
+            <a href="order.php">orders</a>
+            <a href="about.php">About us</a>
+            <a href="contact.php">Contact us</a>
             </nav>
             <div class="icons">
                 <i class="bx bxs-user" id="user-btn"></i>
-                <a href="wishlist.html" class="card-btn"><i class="bx bx-heart"></i><sub>0</sub></a>
-                <a href="cart.html" class="card-btn"><i class="bx bx-cart-download"></i><sub>0</sub></a>
+                <a href="wishlist.php" class="card-btn"><i class="bx bx-heart"></i><sub>0</sub></a>
+                <a href="cart.php" class="card-btn"><i class="bx bx-cart-download"></i><sub>0</sub></a>
                 <i class="bx bx-list-plus" id="menu-btn" style="font-size: 2rem;"></i>
             </div>
             <div class="user-box">
                 <p>Username :Hassan Nasser Mohamed</p>
                 <p>Email :Elkashefhassa1@gmail.com</p>
-                <a href="login.html" class="btn">login</a>
-                <a href="signup.html" class="btn">signup</a>
+                <a href="login.php" class="btn">login</a>
+                <a href="signup.php" class="btn">signup</a>
                 <form action="">
                     <button type="submit" name="logout" class="logout-btn">log out</button>
                 </form>
@@ -46,23 +46,23 @@
         <section id="click">
             <h1 style="text-align: center;">Our categories</h1>
                 <div class="categories-container">
-                    <div class="category-box" onclick="location.href='Drugs.html#medical'">
+                    <div class="category-box" onclick="location.href='Drugs.php#medical'">
                         <img src="647237.png" alt="Medications">
                         <p>Drugs</p>
                     </div>
-                    <div class="category-box" onclick="location.href='skincare.html#skincare'">
+                    <div class="category-box" onclick="location.href='skincare.php#skincare'">
                         <img src="1312091.png" alt="Skin Care">
                         <p>Skin Care</p>
                     </div>
-                    <div class="category-box" onclick="location.href='baby.html#baby'">
+                    <div class="category-box" onclick="location.href='baby.php#baby'">
                         <img src="822123.png" alt="Mom & Baby">
                         <p>Baby Care</p>
                     </div>
-                    <div class="category-box" onclick="location.href='haircare.html#hair'">
+                    <div class="category-box" onclick="location.href='haircare.php#hair'">
                         <img src="13660563.png" alt="Hair Care">
                         <p>Hair Care</p>
                     </div>
-                    <div class="category-box" onclick="location.href='oralcare.html#oral'">
+                    <div class="category-box" onclick="location.href='oralcare.php#oral'">
                         <img src="5802148.png" alt="Oral Care">
                         <p>Oral Care</p>
                     </div>

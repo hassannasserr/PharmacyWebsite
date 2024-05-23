@@ -12,23 +12,23 @@
             <div class="flex">
                 <h1 class="logoany">Phrmasico</h1>
                 <nav class="navbar">
-                <a href="index.html">Home</a>
+                <a href="index.php">Home</a>
                 <a href="#click">Products</a>
-                <a href="order.html">orders</a>
-                <a href="about.html">About us</a>
-                <a href="contact.html">Contact us</a>
+                <a href="order.php">orders</a>
+                <a href="about.php">About us</a>
+                <a href="contact.php">Contact us</a>
                 </nav>
                 <div class="icons">
                     <i class="bx bxs-user" id="user-btn"></i>
-                    <a href="wishlist.html" class="card-btn"><i class="bx bx-heart"></i><sub>0</sub></a>
-                    <a href="cart.html" class="card-btn"><i class="bx bx-cart-download"></i><sub>0</sub></a>
+                    <a href="wishlist.php" class="card-btn"><i class="bx bx-heart"></i><sub>0</sub></a>
+                    <a href="cart.php" class="card-btn"><i class="bx bx-cart-download"></i><sub>0</sub></a>
                     <i class="bx bx-list-plus" id="menu-btn" style="font-size: 2rem;"></i>
                 </div>
                 <div class="user-box">
                     <p>Username :Hassan Nasser Mohamed</p>
                     <p>Email :Elkashefhassan1@gmail.com</p>
-                    <a href="login.html" class="btn">login</a>
-                    <a href="signup.html" class="btn">signup</a>
+                    <a href="login.php" class="btn">login</a>
+                    <a href="signup.php" class="btn">signup</a>
                     <form action="">
                         <button type="submit" name="logout" class="logout-btn">log out</button>
                     </form>
@@ -46,7 +46,7 @@
                     <div class="home-content">
                         <p>Online Medical Supplies</p>
                         <h1>Get Your Vitamens & Minerals</h1>
-                        <a href="products.html" class="btn2">Shop Now</a>
+                        <a href="products.php" class="btn2">Shop Now</a>
                     </div>
                     <div class="home-img">
                         <div class="glc">
@@ -138,14 +138,14 @@
                         <img src="healthcare-medications-composition-with-images-pills-blisters-capsules-jars-drops-syrups-vector-illustration_1284-71689.jpg" usemap="#image-map" class="image">
                         <map name="image-map">
                             
-                        <area target="" alt="tab" title="tab" href="products.html" class="area" coords="368,557,654,379" shape="rect">
-                        <area target="" alt="tab2" title="tab2" href="wishlist.html" class="area" coords="331,127,277,131,263,203,237,272,235,395,266,377,358,535,383,152,371,134,281,379,371,130,354,127,352,129" shape="poly">
-                        <area target="" alt="tab3" title="tab3" href="cart.html" class="area" coords="232,234,97,499" shape="rect">
-                        <area target="" alt="tab3" title="tab3" href="products.html" class="area" coords="963,414,836,535" shape="rect">
-                        <area target="" alt="tab4" title="tab4" href="cart.html" class="area" coords="750,528,747,368,763,323,775,227,818,223,848,231,852,288,849,354,852,389,830,452,832,479,831,511,831,536,806,543,771,540" shape="poly">
-                        <area target="" alt="tab5" title="tab5" href="wishlist.html" class="area" coords="663,513,657,399,633,351,630,294,627,274,610,265,589,258,594,222,621,182,642,144,644,112,665,107,687,107,712,105,736,121,741,162,743,204,738,247,733,294,733,357,731,417,732,451,734,476,735,499,735,509,738,513,734,517" shape="poly">
-                        <area target="" alt="tab6" title="tab6" href="products.html" class="area" coords="411,248,427,76,543,74,577,122,577,184,571,250" shape="poly">
-                        <area target="" alt="tab7" title="tab7" href="cart.html" class="area" coords="393,367,415,269,495,264,550,263,594,265,618,291,626,312,629,359" shape="poly">
+                        <area target="" alt="tab" title="tab" href="products.php" class="area" coords="368,557,654,379" shape="rect">
+                        <area target="" alt="tab2" title="tab2" href="wishlist.php" class="area" coords="331,127,277,131,263,203,237,272,235,395,266,377,358,535,383,152,371,134,281,379,371,130,354,127,352,129" shape="poly">
+                        <area target="" alt="tab3" title="tab3" href="cart.php" class="area" coords="232,234,97,499" shape="rect">
+                        <area target="" alt="tab3" title="tab3" href="products.php" class="area" coords="963,414,836,535" shape="rect">
+                        <area target="" alt="tab4" title="tab4" href="cart.php" class="area" coords="750,528,747,368,763,323,775,227,818,223,848,231,852,288,849,354,852,389,830,452,832,479,831,511,831,536,806,543,771,540" shape="poly">
+                        <area target="" alt="tab5" title="tab5" href="wishlist.php" class="area" coords="663,513,657,399,633,351,630,294,627,274,610,265,589,258,594,222,621,182,642,144,644,112,665,107,687,107,712,105,736,121,741,162,743,204,738,247,733,294,733,357,731,417,732,451,734,476,735,499,735,509,738,513,734,517" shape="poly">
+                        <area target="" alt="tab6" title="tab6" href="products.php" class="area" coords="411,248,427,76,543,74,577,122,577,184,571,250" shape="poly">
+                        <area target="" alt="tab7" title="tab7" href="cart.php" class="area" coords="393,367,415,269,495,264,550,263,594,265,618,291,626,312,629,359" shape="poly">
                     </map>
                     <div class="tooltip" id="tooltip">
 
@@ -155,23 +155,23 @@
             <section id="click">
             <h1 style="text-align: center;">Our categories</h1>
                 <div class="categories-container">
-                    <div class="category-box" onclick="location.href='Drugs.html#medical'">
+                    <div class="category-box" onclick="location.href='Drugs.php#medical'">
                         <img src="647237.png" alt="Medications">
                         <p>Drugs</p>
                     </div>
-                    <div class="category-box" onclick="location.href='skincare.html#skincare'">
+                    <div class="category-box" onclick="location.href='skincare.php#skincare'">
                         <img src="1312091.png" alt="Skin Care">
                         <p>Skin Care</p>
                     </div>
-                    <div class="category-box" onclick="location.href='baby.html#baby'">
+                    <div class="category-box" onclick="location.href='baby.php#baby'">
                         <img src="822123.png" alt="Mom & Baby">
                         <p>Baby Care</p>
                     </div>
-                    <div class="category-box" onclick="location.href='haircare.html#hair'">
+                    <div class="category-box" onclick="location.href='haircare.php#hair'">
                         <img src="13660563.png" alt="Hair Care">
                         <p>Hair Care</p>
                     </div>
-                    <div class="category-box" onclick="location.href='oralcare.html#oral'">
+                    <div class="category-box" onclick="location.href='oralcare.php#oral'">
                         <img src="5802148.png" alt="Oral Care">
                         <p>Oral Care</p>
                     </div>
