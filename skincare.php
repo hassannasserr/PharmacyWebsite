@@ -51,7 +51,7 @@
                         <div class="add-to-cart">
                             <i class="bx bx-heart heart-icon" onclick="addToFavorites(this)"></i>
                             <input type="number" value="1" min="1" class="quantity">
-                            <button onclick="addToCart()">Add to Cart</button>
+                            <button onclick="addToCart(this.closest('.row'))">Add to Cart</button>
                         </div>
                     </div>
                     <div class="price">
@@ -66,7 +66,7 @@
                         <div class="add-to-cart">
                             <i class="bx bx-heart heart-icon" onclick="addToFavorites(this)"></i>
                             <input type="number" value="1" min="1" class="quantity">
-                            <button onclick="addToCart()">Add to Cart</button>
+                            <button onclick="addToCart(this.closest('.row'))">Add to Cart</button>
                         </div>
                     </div>
                     <div class="price">
@@ -82,7 +82,7 @@
                         <div class="add-to-cart">
                             <i class="bx bx-heart heart-icon" onclick="addToFavorites(this)"></i>
                             <input type="number" value="1" min="1" class="quantity">
-                            <button onclick="addToCart()">Add to Cart</button>
+                            <button onclick="addToCart(this.closest('.row'))">Add to Cart</button>
                         </div>
                     </div>
                     
@@ -98,7 +98,7 @@
                     <div class="add-to-cart">
                         <i class="bx bx-heart heart-icon" onclick="addToFavorites(this)"></i>
                         <input type="number" value="1" min="1" class="quantity">
-                        <button onclick="addToCart()">Add to Cart</button>
+                        <button onclick="addToCart(this.closest('.row'))">Add to Cart</button>
                     </div>
                 </div>
                 
@@ -114,7 +114,7 @@
                 <div class="add-to-cart">
                     <i class="bx bx-heart heart-icon" onclick="addToFavorites(this)"></i>
                     <input type="number" value="1" min="1" class="quantity">
-                    <button onclick="addToCart()">Add to Cart</button>
+                    <button onclick="addToCart(this.closest('.row'))">Add to Cart</button>
                 </div>
             </div>
             
@@ -130,7 +130,7 @@
                         <div class="add-to-cart">
                             <i class="bx bx-heart heart-icon" onclick="addToFavorites(this)"></i>
                             <input type="number" value="1" min="1" class="quantity">
-                            <button onclick="addToCart()">Add to Cart</button>
+                            <button onclick="addToCart(this.closest('.row'))">Add to Cart</button>
                         </div>
                     </div>
             
@@ -146,7 +146,7 @@
                         <div class="add-to-cart">
                             <i class="bx bx-heart heart-icon" onclick="addToFavorites(this)"></i>
                             <input type="number" value="1" min="1" class="quantity">
-                            <button onclick="addToCart()">Add to Cart</button>
+                            <button onclick="addToCart(this.closest('.row'))">Add to Cart</button>
                         </div>
                     </div>
                     
@@ -161,7 +161,7 @@
                         <div class="add-to-cart">
                             <i class="bx bx-heart heart-icon" onclick="addToFavorites(this)"></i>
                             <input type="number" value="1" min="1" class="quantity">
-                            <button onclick="addToCart()">Add to Cart</button>
+                            <button onclick="addToCart(this.closest('.row'))">Add to Cart</button>
                         </div>
                     </div>
                     <div class="price">
@@ -176,7 +176,7 @@
                         <div class="add-to-cart">
                             <i class="bx bx-heart heart-icon" onclick="addToFavorites(this)"></i>
                             <input type="number" value="1" min="1" class="quantity">
-                            <button onclick="addToCart()">Add to Cart</button>
+                            <button onclick="addToCart(this.closest('.row'))">Add to Cart</button>
                         </div>
                     </div>
                     <div class="price">
@@ -190,7 +190,7 @@
                         <div class="add-to-cart">
                             <i class="bx bx-heart heart-icon" onclick="addToFavorites(this)"></i>
                             <input type="number" value="1" min="1" class="quantity">
-                            <button onclick="addToCart()">Add to Cart</button>
+                            <button onclick="addToCart(this.closest('.row'))">Add to Cart</button>
                         </div>
                     </div>
                     <div class="price">
@@ -206,7 +206,7 @@
                         <div class="add-to-cart">
                             <i class="bx bx-heart heart-icon" onclick="addToFavorites(this)"></i>
                             <input type="number" value="1" min="1" class="quantity">
-                            <button onclick="addToCart()">Add to Cart</button>
+                            <button onclick="addToCart(this.closest('.row'))">Add to Cart</button>
                         </div>
                     </div>
                     <div class="price">
@@ -221,7 +221,7 @@
                         <div class="add-to-cart">
                             <i class="bx bx-heart heart-icon" onclick="addToFavorites(this)"></i>
                             <input type="number" value="1" min="1" class="quantity">
-                            <button onclick="addToCart()">Add to Cart</button>
+                            <button onclick="addToCart(this.closest('.row'))">Add to Cart</button>
                         </div>
                     </div>
                     <div class="price">
@@ -235,7 +235,7 @@
                         <div class="add-to-cart">
                             <i class="bx bx-heart heart-icon" onclick="addToFavorites(this)"></i>
                             <input type="number" value="1" min="1" class="quantity">
-                            <button onclick="addToCart()">Add to Cart</button>
+                            <button onclick="addToCart(this.closest('.row'))">Add to Cart</button>
                         </div>
                     </div>
                     <div class="price">
@@ -249,7 +249,7 @@
                         <div class="add-to-cart">
                             <i class="bx bx-heart heart-icon" onclick="addToFavorites(this)"></i>
                             <input type="number" value="1" min="1" class="quantity">
-                            <button onclick="addToCart()">Add to Cart</button>
+                            <button onclick="addToCart(this.closest('.row'))">Add to Cart</button>
                         </div>
                     </div>
                     <div class="price">
@@ -264,7 +264,7 @@
                         <div class="add-to-cart">
                             <i class="bx bx-heart heart-icon" onclick="addToFavorites(this)"></i>
                             <input type="number" value="1" min="1" class="quantity">
-                            <button onclick="addToCart()">Add to Cart</button>
+                            <button onclick="addToCart(this.closest('.row'))">Add to Cart</button>
                         </div>
                     </div>
                     <div class="price">

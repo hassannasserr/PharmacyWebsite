@@ -22,7 +22,7 @@
                     <i class="bx bxs-user" id="user-btn"></i>
                     <a href="wishlist.php" class="card-btn"><i class="bx bx-heart"></i><sub>0</sub></a>
                     <a href="cart.php" class="card-btn"><i class="bx bx-cart-download"></i><sub>0</sub></a>
-                    <i class="bx bx-list-plus" id="menu-btn" style="font-size: 2rem;"></i>
+                    <i class="bx bx-list-plus" id="menu-btn" style="font-size: 2rem;"></i><sub>0</sub>
                 </div>
                 <div class="user-box">
                     <p>Username :Hassan Nasser Mohamed</p>

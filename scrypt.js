@@ -76,4 +76,63 @@ function showDescription(element) {
     description.style.display = 'block';
     addToCartButton.style.display = 'block';
 }
+function addToCart(productElement) {
+    const productName = productElement.querySelector('.price h4').innerText;
+    const productPrice = productElement.querySelector('.price p').innerText;
+    const productImage = productElement.querySelector('img').src;
+    const productQuantity = productElement.querySelector('.quantity').value;
+
+    const cartItem = {
+        name: productName,
+        price: productPrice,
+        image: productImage,
+        quantity: parseInt(productQuantity, 10)
+    };
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push(cartItem);
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    alert('Product added to cart!');
+}
+function removeFromCart(productName) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart = cart.filter(item => item.name !== productName);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    loadCart();
+}
+function loadCart() {
+    const cartTableBody = document.querySelector('.cart-list tbody');
+    cartTableBody.innerHTML = ''; // Clear the existing rows
+
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    let totalProducts = 0;
+    let totalPrice = 0;
+
+    cart.forEach(item => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td><img src="${item.image}" alt=""></td>
+            <td>${item.name}</td>
+            <td>${item.price}</td>
+            <td>${item.quantity}</td>
+            <td>${(parseFloat(item.price.replace('EGP', '')) * item.quantity).toFixed(2)} EGP</td>
+            <td><button class="btn" onclick="removeFromCart('${item.name}')">Remove</button></td>
+        `;
+        cartTableBody.appendChild(row);
+
+        totalProducts += item.quantity;
+        totalPrice += parseFloat(item.price.replace('EGP', '')) * item.quantity;
+    });
+
+    const totalRow = document.createElement('tr');
+    totalRow.innerHTML = `
+        <td colspan="2">Total Products = ${totalProducts}</td>
+        <td colspan="4">Total Price = ${totalPrice.toFixed(2)} EGP</td>
+    `;
+    cartTableBody.appendChild(totalRow);
+}
+
+document.addEventListener('DOMContentLoaded', loadCart);
+
 
