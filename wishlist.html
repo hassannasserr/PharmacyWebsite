@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title >Phrmasico</title>
+</head>
+<body>
+    <header class="header">
+        <div class="flex">
+            <h1 class="logoany">Phrmasico</h1>
+            <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="order.html">orders</a>
+            <a href="about.html">About us</a>
+            <a href="contact.html">Contact us</a>
+            </nav>
+            <div class="icons">
+                <i class="bx bxs-user" id="user-btn"></i>
+                <a href="wishlist.html" class="card-btn"><i class="bx bx-heart"></i><sub>0</sub></a>
+                <a href="cart.html" class="card-btn"><i class="bx bx-cart-download"></i><sub>0</sub></a>
+                <i class="bx bx-list-plus" id="menu-btn" style="font-size: 2rem;"></i>
+            </div>
+            <div class="user-box">
+                <p>Username :Hassan Nasser Mohamed</p>
+                <p>Email :Elkashefhassan1@gmail.com</p>
+                <a href="login.html" class="btn">login</a>
+                <a href="signup.html" class="btn">signup</a>
+                <form action="">
+                    <button type="submit" name="logout" class="logout-btn">log out</button>
+                </form>
+            </div>
+        </div>
+        </header>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <section class="empty" id="empty">
+            <H1>Your Wishlist</H1>
+        </section>
+
+
+        <section class="wishlist" id="WL">
+            
+            <div class="wish">
+                <table border="1">
+                    <head>
+                        <tr>
+                            <th>Product Image</th>
+                            <th>Product Name</th>
+                            <th>Product Price</th>
+                            <th>Stock Status</th>
+                            <th>date added</th>
+                            <th></th>
+                        </tr>
+                    </head>
+                    <body>
+                        <tr>
+                            <td><img src="Media/Blood Pressure Monitor - Benner.jpg" alt=""></td>
+                            <td>blood Pressure Monitor</td>
+                            <td>500.00 EGP</td>
+                            <td><i class="bx bxs-check-circle"></i> <span style="color: green;" >in</span> stock</td>
+                            <td>24/4/2022</td>
+                            <td><button class="btn">Remove</button></td>
+                        </tr>
+                        <tr>
+                            <td><img src="Media/Vitamins D3 Luminous Lemon.jpg" alt=""></td>
+                            <td>Vitamen D3</td>
+                            <td>250.00 EGP</td>
+                            <td><i class="bx bxs-check-circle"></i><span style="color: green;" >in</span> stock</td>
+                            <td>17/1/2024</td>
+                            <td><button class="btn">Remove</button></td>
+                        </tr>
+                        <tr>
+                            <td><img src="Media/Hatch Baby Rest Night Light.jpg" alt=""></td>
+                            <td>Hatch Baby Rest</td>
+                            <td>1500.00 EGP</td>
+                            <td><i class="bx bxs-x-circle"></i><span style="color: red;" >out</span> of stock</td>
+                            <td>1/7/2014</td>
+                            <td><button class="btn">Remove</button></td>
+                        </tr>
+                        
+                    </body>
+                </table>
+            </div>
+        </section>
+        <footer class="footer" id="footer">
+            <div class="container">
+                <div class="about-us">
+                    <p>&copy; 2024 Phrmasico. All rights reserved</p>
+                </div>
+            </div>
+        </footer>
+        <script src="scrypt.js"></script>
+</body>
+</html>
