@@ -136,3 +136,63 @@ function loadCart() {
 document.addEventListener('DOMContentLoaded', loadCart);
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to add to favorites
+    function addToFavorites(iconElement) {
+        const row = iconElement.closest('.row');
+        const productImage = row.querySelector('img').src;
+        const productName = row.querySelector('.price h4').innerText;
+        const productPrice = row.querySelector('.price p').innerText;
+
+        const product = {
+            image: productImage,
+            name: productName,
+            price: productPrice,
+            dateAdded: new Date().toLocaleDateString()
+        };
+
+        let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        wishlist.push(product);
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+
+        alert('Added to Wishlist');
+    }
+
+    // Attach the function to the global scope
+    window.addToFavorites = addToFavorites;
+
+    // Display wishlist items
+    function loadWishlist() {
+        const wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        const wishlistTableBody = document.querySelector('.wishlist table tbody');
+
+        if (wishlistTableBody) {
+            wishlist.forEach(product => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td><img src="${product.image}" alt="Product Image" width="100"></td>
+                    <td>${product.name}</td>
+                    <td>${product.price}</td>
+                    <td><i class="bx bxs-check-circle"></i><span style="color: green;">in</span> stock</td>
+                    <td>${product.dateAdded}</td>
+                    <td><button class="btn" onclick="removeFromWishlist(this)">Remove</button></td>
+                `;
+                wishlistTableBody.appendChild(row);
+            });
+        }
+    }
+
+    // Function to remove from wishlist
+    window.removeFromWishlist = function(button) {
+        const row = button.closest('tr');
+        const productName = row.children[1].innerText;
+        row.remove();
+
+        let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        wishlist = wishlist.filter(product => product.name !== productName);
+        localStorage.setItem('wishlist', JSON.stringify(wishlist));
+    }
+
+    // Load the wishlist on page load
+    loadWishlist();
+});

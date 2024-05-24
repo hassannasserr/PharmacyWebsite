@@ -58,7 +58,7 @@
                     <div class="description">
                         <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                         <div class="add-to-cart">
-                            <i class="bx bx-heart heart-icon" onclick="addToFavorites(this)"></i>
+                        <i class="bx bx-heart heart-icon" onclick="addToFavorites(this)"></i>
                             <input type="number" value="1" min="1" class="quantity">
                             <button onclick="addToCart(this.closest('.row'))">Add to Cart</button>
                         </div>

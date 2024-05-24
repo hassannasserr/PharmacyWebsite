@@ -47,49 +47,24 @@
 
 
         <section class="wishlist" id="WL">
-            
-            <div class="wish">
-                <table border="1">
-                    <head>
-                        <tr>
-                            <th>Product Image</th>
-                            <th>Product Name</th>
-                            <th>Product Price</th>
-                            <th>Stock Status</th>
-                            <th>date added</th>
-                            <th></th>
-                        </tr>
-                    </head>
-                    <body>
-                        <tr>
-                            <td><img src="Media/Blood Pressure Monitor - Benner.jpg" alt=""></td>
-                            <td>blood Pressure Monitor</td>
-                            <td>500.00 EGP</td>
-                            <td><i class="bx bxs-check-circle"></i> <span style="color: green;" >in</span> stock</td>
-                            <td>24/4/2022</td>
-                            <td><button class="btn">Remove</button></td>
-                        </tr>
-                        <tr>
-                            <td><img src="Media/Vitamins D3 Luminous Lemon.jpg" alt=""></td>
-                            <td>Vitamen D3</td>
-                            <td>250.00 EGP</td>
-                            <td><i class="bx bxs-check-circle"></i><span style="color: green;" >in</span> stock</td>
-                            <td>17/1/2024</td>
-                            <td><button class="btn">Remove</button></td>
-                        </tr>
-                        <tr>
-                            <td><img src="Media/Hatch Baby Rest Night Light.jpg" alt=""></td>
-                            <td>Hatch Baby Rest</td>
-                            <td>1500.00 EGP</td>
-                            <td><i class="bx bxs-x-circle"></i><span style="color: red;" >out</span> of stock</td>
-                            <td>1/7/2014</td>
-                            <td><button class="btn">Remove</button></td>
-                        </tr>
-                        
-                    </body>
-                </table>
-            </div>
-        </section>
+        <div class="wish">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Product Image</th>
+                        <th>Product Name</th>
+                        <th>Product Price</th>
+                        <th>Stock Status</th>
+                        <th>Date Added</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Wishlist items will be added here dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </section>
         <footer class="footer" id="footer">
             <div class="container">
                 <div class="about-us">
