@@ -220,6 +220,9 @@ body {
     </style>
 </head>
 <body>
+<?php
+        session_start(); // Start the session       // Your existing code
+    ?>
     <header class="header">
         <div class="flex">
             <h1 class="logoany">Phrmasico</h1>
@@ -237,8 +240,8 @@ body {
                 <i class="bx bx-list-plus" id="menu-btn" style="font-size: 2rem;"></i>
             </div>
             <div class="user-box">
-                <p>Username :Hassan Nasser Mohamed</p>
-                <p>Email :Elkashefhassan1@gmail.com</p>
+            <p>Username: <?php echo isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest'; ?></p>              
+            <p>Email:  <?php echo isset($_SESSION['email']) ? $_SESSION['email'] : 'Guest'; ?></p>
                 <a href="login.php" class="btn">login</a>
                 <a href="signup.php" class="btn">signup</a>
                 <form action="">
@@ -337,7 +340,6 @@ body {
 
             </div>
         </section>
-        <script src="scrypt.js"></script>
         <footer class="footer" id="footer">
             <div class="container">
                 <div class="about-us">

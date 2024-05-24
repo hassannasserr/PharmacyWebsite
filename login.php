@@ -100,8 +100,8 @@ p a:hover {
                 <i class="bx bx-list-plus" id="menu-btn" style="font-size: 2rem;"></i>
             </div>
             <div class="user-box">
-                <p>Username :Hassan Nasser Mohamed</p>
-                <p>Email :Elkashefhassan1@gmail.com</p>
+            <p>Username: <?php echo $_SESSION['username']; ?></p>
+            <p>Email: Elkashefhassan1@gmail.com</p>
                 <a href="login.php" class="btn">login</a>
                 <a href="signup.php" class="btn">signup</a>
                 <form action="">
@@ -118,15 +118,19 @@ p a:hover {
         <br>
         <section class="login" id="loin">
             <div class="login-container">
-                <form action="">
+                <form action="login.inc.php" method="post">
                     <h1>Login</h1>
+                    <?php if (isset($_GET['error'])) { ?>
+                        <p class="error" style="color:red;"><?php echo $_GET['error']; ?></p>                        
+                    <?php } ?>
+                    <br>
                     <div class="input-field">
                         <i class="bx bxs-user"></i>
-                        <input type="text" placeholder="  Username">
+                        <input type="text" name="uname" placeholder="  Username">
                     </div>
                     <div class="input-field">
                         <i class="bx bxs-lock"></i>
-                        <input type="password" placeholder="  Password">
+                        <input type="password" name="pwd" placeholder="  Password">
                     </div>
                     <button type="submit" class="btn1">Login</button>
                     <p>Don't have an account? <a href="signup.php">Sign up</a></p>

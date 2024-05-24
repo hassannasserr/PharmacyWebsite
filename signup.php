@@ -118,19 +118,27 @@
         <br>
         <section class="signup" id="signup">
             <div class="signup-container">
-                <form action="">
+                <form action="signup.inc.php" method="post">
                     <h1>Sign up</h1>
+                    <?php if (isset($_GET['error'])) { ?>
+                        <p class="error" style="color:red;"><?php echo $_GET['error']; ?></p>                        
+                    <?php } ?>
+                    <br>
                     <div class="input-field">
                         <i class="bx bxs-user"></i>
-                        <input type="text" placeholder="   Username">
+                        <input type="text" name="fname" placeholder="   Full Name">
+                    </div>
+                    <div class="input-field">
+                        <i class="bx bxs-user"></i>
+                        <input type="text" name="uname" placeholder="   Username">
                     </div>
                     <div class="input-field">
                         <i class="bx bx-mail-send"></i>
-                        <input type="email" placeholder="   Email">
+                        <input type="email" name="Email" placeholder="   Email">
                     </div>
                     <div class="input-field">
                         <i class="bx bxs-lock"></i>
-                        <input type="password" placeholder="   Password">
+                        <input type="password" name="pwd" placeholder="   Password">
                     </div>
                     <button type="submit" class="btn1">Sign up</button>
                     <p>Already have an account? <a href="login.php">Login</a></p>
