@@ -27,10 +27,7 @@ body {
 }
 
 /* Header styles */
-.header {
-    background-color: #f0f0f0;
-    padding: 20px;
-}
+
 
 .flex {
     display: flex;
@@ -50,9 +47,6 @@ body {
     margin-left: 10px;
 }
 
-.user-box {
-    display: none;
-}
 
 .cart {
     text-align: center;
@@ -271,34 +265,7 @@ body {
                         </tr>
                     </head>
                     <body>
-                        <tr>
-                            <td><img src="Media/Biotin Complex with Coconut Oil PNG.jpg" alt=""></td>
-                            <td>Coconut Oil</td>
-                            <td>100.00 EGP</td>
-                            <td>2</td>
-                            <td>200.00 EGP</td>
-                            <td><button class="btn">Remove</button></td>
-                        </tr>
-                        <tr>
-                            <td><img src="Media/Blood Pressure Monitor - Benner.jpg" alt=""></td>
-                            <td>blood Pressure Monitor</td>
-                            <td>500.00 EGP</td>
-                            <td>1</td>
-                            <td>500.00 EGP</td>
-                            <td><button class="btn">Remove</button></td>
-                        </tr>
-                        <tr>
-                            <td><img src="Media/Vitamin D3 Gummies, Blueberry Taste.jpg" alt=""></td>
-                            <td>Calcium & Magnesium</td>
-                            <td>150.00 EGP</td>
-                            <td>3</td>
-                            <td>450.00 EGP</td>
-                            <td><button class="btn">Remove</button></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">Total Products = 6</td>
-                            <td colspan="4">Total price = 1250 EGP</td>
-                        </tr>
+                        
 
                     </body>
                 </table>
@@ -306,27 +273,27 @@ body {
         </section>
         <section class="Order" id="od">
             <div class="make-order">
-                <form action="">
+                <form action="cart.inc.php" method="post">
                     <h1>Make Order</h1>
                     <div class="input-field">
                         <i class="bx bxs-user"></i>
-                        <input type="text" placeholder="Full Name">
+                        <input type="text" name="fname" placeholder="Full Name">
                     </div>
                     <div class="input-field">
                         <i class="bx bx-mail-send"></i>
-                        <input type="email" placeholder="Email">
+                        <input type="email" name="email" placeholder="Email">
                     </div>
                     <div class="input-field">
                         <i class="bx bxs-phone"></i>
-                        <input type="tel" placeholder="Phone">
+                        <input type="tel" name="phone" placeholder="Phone">
                     </div>
                     <div class="input-field">
                         <i class="bx bxs-home"></i>
-                        <input type="text" placeholder="Address">
+                        <input type="text" name="address" placeholder="Address">
                     </div>
                     <div class="input-field">
                         <i class="bx bxs-credit-card"></i>
-                        <input type="text" placeholder="Credit Card">
+                        <input type="text" name="ccard" placeholder="Credit Card">
                     </div>
                     <div class="input-field">
                         <input type="checkbox" id="remember-me">
@@ -335,7 +302,14 @@ body {
                     <button type="submit" class="btn1">Order</button>
 
                 </form>
-
+        <script>
+    var tbody = document.querySelector('tbody');
+    if (tbody.children.length > 0) {
+    console.log('There are items in the table body.');
+    } else {
+    console.log('There are no items in the table body.');
+    }
+    </script>
 
 
             </div>
