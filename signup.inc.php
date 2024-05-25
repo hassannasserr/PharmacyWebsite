@@ -32,8 +32,14 @@ VALUES ('$fname', '$uname', '$email', '$pass')";
 
 
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-    header("Location: login.php");
+    echo
+    " 
+    <script> 
+     alert('signed up  successfully!');
+     window.location.href='login.php';
+    </script>
+    }";
+   
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }

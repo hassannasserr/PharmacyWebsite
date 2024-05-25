@@ -125,19 +125,15 @@
                     <?php } ?>
                     <br>
                     <div class="input-field">
-                        <i class="bx bxs-user"></i>
                         <input type="text" name="fname" placeholder="   Full Name">
                     </div>
                     <div class="input-field">
-                        <i class="bx bxs-user"></i>
                         <input type="text" name="uname" placeholder="   Username">
                     </div>
                     <div class="input-field">
-                        <i class="bx bx-mail-send"></i>
                         <input type="email" name="Email" placeholder="   Email">
                     </div>
                     <div class="input-field">
-                        <i class="bx bxs-lock"></i>
                         <input type="password" name="pwd" placeholder="   Password">
                     </div>
                     <button type="submit" class="btn1">Sign up</button>
