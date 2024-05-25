@@ -21,9 +21,8 @@ if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
 }
 $mail = new PHPMailer();
 $pincode=rand(10000000,99999999);
-$expiry=date('Y-m-d H:i:s', strtotime('+1 hour'));
-$stmt = $conn->prepare("UPDATE users SET pincode = ?, expiry = ? WHERE email = ?");
-$stmt->bind_param("sss", $pincode, $expiry, $email);
+$stmt = $conn->prepare("UPDATE users SET pincode = ? WHERE email = ?");
+$stmt->bind_param("sss", $pincode, $email);
  // Execute the statement
  if ($stmt->execute()) {
     $mail = new PHPMailer(true);
