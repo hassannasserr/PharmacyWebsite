@@ -253,28 +253,31 @@ body {
         <section class="cart" id="crt">
             <h1 >Shopping Cart</h1>
             <div class="cart-list">
-                <table>
-                    <head>
-                        <tr>
-                            <th>Product Image</th>
-                            <th>Product Name</th>
-                            <th>Product Price</th>
-                            <th>Quantity</th>
-                            <th>Total</th>
-                            <th></th>
-                        </tr>
-                    </head>
-                    <body>
-                        
-
-                    </body>
-                </table>
+            <table class="cart-list">
+             <thead>
+            <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Action</th>
+        </t>
+            </thead>
+            <tbody>
+        <!-- Cart items will be inserted here by the JavaScript -->
+    </tbody>
+</table>
             </div>
         </section>
         <section class="Order" id="od">
             <div class="make-order">
                 <form action="cart.inc.php" method="post">
                     <h1>Make Order</h1>
+                    <?php if (isset($_GET['error'])) { ?>
+                        <p class="error" style="color:red;"><?php echo $_GET['error']; ?></p>                        
+                    <?php } ?>
+                    <br>
                     <div class="input-field">
                         <i class="bx bxs-user"></i>
                         <input type="text" name="fname" placeholder="Full Name">
@@ -296,22 +299,36 @@ body {
                         <input type="text" name="ccard" placeholder="Credit Card">
                     </div>
                     <div class="input-field">
+                        <i class="bx bxs-credit-card"></i>
+                        <input type="text" name="product1name" placeholder="product 1 name">
+                    </div>
+                    <div class="input-field">
+                        <i class="bx bxs-credit-card"></i>
+                        <input type="text" name="product1q" placeholder="product 1 Quantity">
+                    </div>
+                    <div class="input-field">
+                        <i class="bx bxs-credit-card"></i>
+                        <input type="text" name="product2name" placeholder="product 2 name">
+                    </div>
+                    <div class="input-field">
+                        <i class="bx bxs-credit-card"></i>
+                        <input type="text" name="product2q" placeholder="product 2 Quantity">
+                    </div>
+                    <div class="input-field">
+                        <i class="bx bxs-credit-card"></i>
+                        <input type="text" name="product3name" placeholder="product 3 name">
+                    </div>
+                    <div class="input-field">
+                        <i class="bx bxs-credit-card"></i>
+                        <input type="text" name="product3q" placeholder="product 3 Quantity">
+                    </div>
+                    <div class="input-field">
                         <input type="checkbox" id="remember-me">
                         <label for="remember-me">Remember Me</label>
                     </div>
+
                     <button type="submit" class="btn1">Order</button>
-
                 </form>
-        <script>
-    var tbody = document.querySelector('tbody');
-    if (tbody.children.length > 0) {
-    console.log('There are items in the table body.');
-    } else {
-    console.log('There are no items in the table body.');
-    }
-    </script>
-
-
             </div>
         </section>
         <footer class="footer" id="footer">

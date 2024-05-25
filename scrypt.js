@@ -196,3 +196,4 @@ document.addEventListener('DOMContentLoaded', function() {
     // Load the wishlist on page load
     loadWishlist();
 });
+

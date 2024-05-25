@@ -40,10 +40,7 @@
     </header>
     <br><br><br><br><br><br>
     <h1 style="text-align: center;">Drugs</h1>
-    <div class="search-box">
-        <input type="text" placeholder="Search...">
-        <button><i class="bx bx-search"></i></button>
-    </div>
+   
     <div class="menu-dropdown">
         <button class="dropbtn">Categories</button>
         <div class="menu-content">
