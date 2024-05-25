@@ -6,7 +6,7 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        .login {
+        .forgetpass {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@
     background-color: #f4f4f4; /* Adjust background color as needed */
 }
 
-.login-container {
+.forgetpass-container {
     width: 400px; /* Adjust container width as needed */
     background-color: #fff; /* Adjust container background color as needed */
     padding: 40px;
@@ -22,7 +22,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow effect */
 }
 
-.login h1 {
+.forgetpass h1 {
     text-align: center;
     margin-bottom: 20px; /* Adjust margin as needed */
     color: #333; /* Adjust text color as needed */
@@ -100,8 +100,8 @@ p a:hover {
                 <i class="bx bx-list-plus" id="menu-btn" style="font-size: 2rem;"></i>
             </div>
             <div class="user-box">
-            <p>Username: <?php echo $_SESSION['username']; ?></p>
-            <p>Email: Elkashefhassan1@gmail.com</p>
+            <p>Username: <?php echo isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest'; ?></p>              
+            <p>Email:  <?php echo isset($_SESSION['email']) ? $_SESSION['email'] : 'Guest'; ?></p>
                 <a href="login.php" class="btn">login</a>
                 <a href="signup.php" class="btn">signup</a>
                 <form action="">
@@ -116,25 +116,20 @@ p a:hover {
         <br>
         <br>
         <br>
-        <section class="login" id="loin">
-            <div class="login-container">
-                <form action="login.inc.php" method="post">
-                    <h1>Login</h1>
+        <section class="forgetpass" id="loin">
+            <div class="forgetpass-container">
+                <form action="forgetpass.inc.php" method="post">
+                    <h1>forget password</h1>
                     <?php if (isset($_GET['error'])) { ?>
                         <p class="error" style="color:red;"><?php echo $_GET['error']; ?></p>                        
                     <?php } ?>
                     <br>
                     <div class="input-field">
                         <i class="bx bxs-user"></i>
-                        <input type="text" name="uname" placeholder="  Username">
+                        <input type="text" name="email" placeholder="  Email">
                     </div>
-                    <div class="input-field">
-                        <i class="bx bxs-lock"></i>
-                        <input type="password" name="pwd" placeholder="  Password">
-                    </div>
-                    <p><a href="forgetpassword.php">Forget password?</a></p>
-                    <button type="submit" class="btn1">Login</button>
-                    <p>Don't have an account? <a href="signup.php">Sign up</a></p>
+                    <button type="submit" class="btn1">Send</button>
+                   
                 </form>
             </div>
 
