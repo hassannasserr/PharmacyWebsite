@@ -112,13 +112,16 @@ main {
             </section>
             <section class="contact-form">
                 <h2>Send us a Message</h2>
-                <form>
-                    <label for="name">Your Name:</label>
-                    <input type="text" id="name" name="name" required>
+                <form action="contact.inc.php" method="post">   
+                <?php if (isset($_GET['error'])) { ?>
+                        <p class="error" style="color:red;"><?php echo $_GET['error']; ?></p>                        
+                    <?php } ?> 
+                <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" >
                     <label for="email">Your Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" >
                     <label for="message">Message:</label>
-                    <textarea id="message" name="message" required></textarea>
+                    <textarea id="message" name="message" ></textarea>
                     <button type="submit">Send Message</button>
                 </form>
             </section>
