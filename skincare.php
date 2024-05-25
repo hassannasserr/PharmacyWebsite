@@ -39,10 +39,15 @@
         </div>
     </header>
     <br><br><br><br><br><br>
-    <h1 style="text-align: center;">Baby Care</h1>
-    <div class="search-box">
-        <input type="text" placeholder="Search...">
-        <button><i class="bx bx-search"></i></button>
+    <h1 style="text-align: center;">Skin Care</h1>
+    <div class="menu-dropdown">
+        <button class="dropbtn">Categories</button>
+        <div class="menu-content">
+            <a href="drugs.php">Drags</a>
+            <a href="skincare.php">Skin Care</a>
+            <a href="baby.php">Baby Care</a>
+            <a href="haircare.php">Hair Care</a>
+        </div>
     </div>
 
     <div class="all">

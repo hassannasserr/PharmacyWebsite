@@ -1,6 +1,7 @@
 
 <?php
 include 'db.php';
+session_start();
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -24,6 +25,13 @@ $product2name = $_POST['product2name'];
 $product2q = $_POST['product2q'];
 $product3name = $_POST['product3name'];
 $product3q = $_POST['product3q'];
+$n=$_SESSION['username'];
+if(empty($product1name) and empty($product2name) and empty($product3name)){
+    header("Location: cart.php?error=Product name is required");
+}
+if(empty($n)){
+    header("Location: cart.php?error=You must login first");
+}
 if(empty($name)){
     header("Location: cart.php?error=Full Name is required");
 }
@@ -179,7 +187,7 @@ if(!empty($product3name) and !empty($product3q) and is_numeric($product3q)){
     echo
     " 
     <script> 
-     alert('Message was sent successfully!');
+     alert('Order has placed successfully!');
      window.location.href='cart.php';
     </script>
     }";
