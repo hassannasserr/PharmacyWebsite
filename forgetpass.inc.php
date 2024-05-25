@@ -7,7 +7,10 @@ use PHPMailer\PHPMailer\Exception;
 require 'phpmailers/src/Exception.php';
 require 'phpmailers/src/PHPMailer.php';
 require 'phpmailers/src/SMTP.php';
+session_start();
 $email = $_POST['email'];
+$_SESSION['email'] = $email;
+
 if(empty($email)){
     header("Location: forgetpassword.php?error=Email is required");
     exit();
@@ -53,7 +56,7 @@ $stmt->bind_param("sss", $pincode, $expiry, $email);
     " 
     <script> 
      alert('Message was sent successfully!');
-     window.location.href='cart.php';
+     window.location.href='verifypin.php';
     </script>
     }";
    

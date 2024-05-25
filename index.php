@@ -32,9 +32,9 @@
                   <p>Email:  <?php echo isset($_SESSION['email']) ? $_SESSION['email'] : 'Guest'; ?></p>
                     <a href="login.php" class="btn">login</a>
                     <a href="signup.php" class="btn">signup</a>
-                    <form action="">
-                        <button type="submit" name="logout" class="logout-btn">log out</button>
-                    </form>
+                    <form action="logout.php" method="post">
+                <button type="submit" name="logout" class="logout-btn">Log out</button>
+                </form>
                 </div>
             </div>
             </header>

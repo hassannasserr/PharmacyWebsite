@@ -67,8 +67,8 @@ main {
                   <p>Email:  <?php echo isset($_SESSION['email']) ? $_SESSION['email'] : 'Guest'; ?></p>
                 <a href="login.php" class="btn">Login</a>
                 <a href="signup.php" class="btn">Signup</a>
-                <form action="">
-                    <button type="submit" name="logout" class="logout-btn">Log out</button>
+                <form action="logout.php" method="post">
+                <button type="submit" name="logout" class="logout-btn">Log out</button>
                 </form>
             </div>
         </div>

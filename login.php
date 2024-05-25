@@ -83,6 +83,9 @@ p a:hover {
     <title>Phrmasico</title>
 </head>
 <body>
+<?php
+        session_start(); // Start the session       // Your existing code
+    ?>
     <header class="header">
         <div class="flex">
             <h1 class="logoany">Phrmasico</h1>
@@ -100,12 +103,12 @@ p a:hover {
                 <i class="bx bx-list-plus" id="menu-btn" style="font-size: 2rem;"></i>
             </div>
             <div class="user-box">
-            <p>Username: <?php echo $_SESSION['username']; ?></p>
-            <p>Email: Elkashefhassan1@gmail.com</p>
+            <p>Username: <?php echo isset($_SESSION['username']) ? $_SESSION['username'] : 'Guest'; ?></p>              
+            <p>Email:  <?php echo isset($_SESSION['email']) ? $_SESSION['email'] : 'Guest'; ?></p>
                 <a href="login.php" class="btn">login</a>
                 <a href="signup.php" class="btn">signup</a>
-                <form action="">
-                    <button type="submit" name="logout" class="logout-btn">log out</button>
+                <form action="logout.php" method="post">
+                <button type="submit" name="logout" class="logout-btn">Log out</button>
                 </form>
             </div>
         </div>
@@ -125,11 +128,9 @@ p a:hover {
                     <?php } ?>
                     <br>
                     <div class="input-field">
-                        <i class="bx bxs-user"></i>
                         <input type="text" name="uname" placeholder="  Username">
                     </div>
                     <div class="input-field">
-                        <i class="bx bxs-lock"></i>
                         <input type="password" name="pwd" placeholder="  Password">
                     </div>
                     <p><a href="forgetpassword.php">Forget password?</a></p>

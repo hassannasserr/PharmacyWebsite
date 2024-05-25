@@ -6,7 +6,7 @@
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        .forgetpass {
+        .resetpass {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@
     background-color: #f4f4f4; /* Adjust background color as needed */
 }
 
-.forgetpass-container {
+.resetpass-container {
     width: 400px; /* Adjust container width as needed */
     background-color: #fff; /* Adjust container background color as needed */
     padding: 40px;
@@ -22,7 +22,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow effect */
 }
 
-.forgetpass h1 {
+.resetpass h1 {
     text-align: center;
     margin-bottom: 20px; /* Adjust margin as needed */
     color: #333; /* Adjust text color as needed */
@@ -116,16 +116,19 @@ p a:hover {
         <br>
         <br>
         <br>
-        <section class="forgetpass" id="loin">
-            <div class="forgetpass-container">
-                <form action="forgetpass.inc.php" method="post">
-                    <h1>forget password</h1>
+        <section class="resetpass" id="loin">
+            <div class="resetpass-container">
+                <form action="resetpass.inc.php" method="post">
+                    <h1>Reset Password</h1>
                     <?php if (isset($_GET['error'])) { ?>
                         <p class="error" style="color:red;"><?php echo $_GET['error']; ?></p>                        
                     <?php } ?>
                     <br>
                     <div class="input-field">
-                        <input type="text" name="email" placeholder="  Email">
+                        <input type="password" name="pwd" placeholder=" New Password">
+                    </div>
+                    <div class="input-field">
+                        <input type="password" name="cpwd" placeholder="  Confirm Password">
                     </div>
                     <button type="submit" class="btn1">Send</button>
                    
