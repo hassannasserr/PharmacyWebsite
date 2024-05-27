@@ -40,7 +40,7 @@
     </header>
     <br><br><br><br><br><br>
     <h1 style="text-align: center;">Baby Care</h1>
-    
+    <div class="centered">
     <div class="menu-dropdown">
         <button class="dropbtn">Categories</button>
         <div class="menu-content">
@@ -49,6 +49,7 @@
             <a href="oralcare.php">Oral Care</a>
             <a href="haircare.php">Hair Care</a>
         </div>
+    </div>
     </div>
     <div class="all">
         <section id="medical">
