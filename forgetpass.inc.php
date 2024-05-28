@@ -45,8 +45,24 @@ $stmt->bind_param("ss", $pincode, $email);
     //Content
     $mail->isHTML(true);               //Set email format to HTML
     $mail->Subject = 'Password Reset';    // email subject headings
-    $mail->Body = " Password Reset Dear User, We have received a request to reset your account password. Please use the following pincode to reset your password: $pincode This pincode is valid for the next hour. If you did not request this password reset, please ignore this email. Thank you, Pharmasico Pharmacy";
-    
+    $mail->Body = "
+    <html>
+    <head>
+        <title>Password Reset Request</title>
+    </head>
+    <body>
+        <h1>Password Reset Request</h1>
+        <p>Dear User,</p>
+        <p>We have received a request to reset the password for your account. If you made this request, please use the following pin code to reset your password:</p>
+        <p><strong>$pincode</strong></p>
+        <p>Please note that this pin code is valid for the next hour.</p>
+        <p>If you did not request this password reset, please ignore this email and your password will remain unchanged.</p>
+        <p>Thank you for your attention to this matter.</p>
+        <p>Best regards,</p>
+        <p>Pharmasico Pharmacy</p>
+    </body>
+    </html>";
+       
 
     
 

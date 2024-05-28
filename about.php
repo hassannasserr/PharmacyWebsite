@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <link rel="stylesheet" href="style.css">    
     <style>
         /* Main section styles */
@@ -39,38 +41,50 @@ main {
 .team p {
     margin: 0;
 }
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
 
+.team-member {
+    position: relative;
+    text-align: center;
+    width: 30%;
+    transition: transform 0.3s ease-in-out; /* Add this line */
+}
+.team-member:hover {
+    transform: scale(1.1); /* Add this line */
+}
+.team-member img {
+    width: 60%; /* Decrease this value to make the images smaller */
+    height: auto;
+    display: block; /* Add this to center the image */
+    margin: 0 auto; /
+}
+
+.team-member h3 {
+    margin-top: 10px;
+    color: var(--maincolor);
+}
+.social-icons {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.team-member:hover .social-icons {
+    display: block;
+}
     </style>
     <title>Phrmasico</title>
 </head>
 <body>
-    <header class="header">
-        <div class="flex">
-            <h1 class="logoany">Phrmasico</h1>
-            <nav class="navbar">
-            <a href="index.php">Home</a>
-            <a href="products.php">Products</a>
-            <a href="order.php">orders</a>
-            <a href="about.php">About us</a>
-            <a href="contact.php">Contact us</a>
-            </nav>
-            <div class="icons">
-                <i class="bx bxs-user" id="user-btn"></i>
-                <a href="wishlist.php" class="card-btn"><i class="bx bx-heart"></i><sub>0</sub></a>
-                <a href="cart.php" class="card-btn"><i class="bx bx-cart-download"></i><sub>0</sub></a>
-                <i class="bx bx-list-plus" id="menu-btn" style="font-size: 2rem;"></i>
-            </div>
-            <div class="user-box">
-                <p>Username :Hassan Nasser Mohamed</p>
-                <p>Email :Elkashefhassan1@gmail.com</p>
-                <a href="login.php" class="btn">login</a>
-                <a href="signup.php" class="btn">signup</a>
-                <form action="logout.php" method="post">
-                <button type="submit" name="logout" class="logout-btn">Log out</button>
-                </form>
-            </div>
-        </div>
-        </header>
+
+    <?php
+    session_start(); 
+    include 'header.php'; ?>
         <br>
         <br>
         <br>
@@ -93,9 +107,37 @@ main {
                 </ul>
             </section>
             <section class="team">
-                <h2>Our Team</h2>
-                <p>Our team consists of experienced pharmacists, knowledgeable staff, and dedicated healthcare professionals. Together, we work tirelessly to ensure that our customers receive the best possible care and service.</p>
-            </section>
+                <h2>Our Team</h2>    
+                 <div class="team-members">
+             <div class="team-member">
+                <img src="Hassan.jpeg" alt="Hassan">
+                <h3>Hassan Nasser</h3>
+                <div class="social-icons">
+                <a href="https://www.instagram.com/hassanellkashef?igsh=MTYzdzN3aHZpY2c2eQ=="><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/hassan-nasser-710582249/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/hassannasserr"><i class="fab fa-github"></i></a>
+              </div>
+             </div>
+            <div class="team-member">
+                <img src="Sherry.jpeg" alt="Sherry">
+                <h3>Sherry Ezz</h3>
+                <div class="social-icons">
+                     <a href="https://www.instagram.com/sherryezzyacoub?igsh=MTk3dHZreHo4bWlycQ=="><i class="fab fa-instagram"></i></a>
+                     <a href="https://www.linkedin.com/in/sherry-ezz-2687ba256/"><i class="fab fa-linkedin"></i></>
+                     <a href="https://github.com/SherryEZZ"><i class="fab fa-github"></i></a>
+                    </div>
+            </div>
+            <div class="team-member">
+                <img src="Esraa.jpeg" alt="Esraa">
+                <h3>Esraa Yousry</h3>
+                <div class="social-icons">
+                 <a href="https://www.instagram.com/esraayouseri24?igsh=MXN5MDQ5Nmdqcmp0aw=="><i class="fab fa-instagram"></i></a>
+                 <a href="https://www.linkedin.com/in/esraa-yosrei-86813b289/"><i class="fab fa-linkedin"></i></a>
+                 <a href="https://github.com/esraayousriii"><i class="fab fa-github"></i></a>
+                </div>
+             </div>
+            </div>
+        </section>
         </main>
         <footer class="footer" id="footer">
             <div class="container">
@@ -105,5 +147,17 @@ main {
             </div>
         </footer>
         <script src="scrypt.js"></script>
+
+        <script>
+    $(document).ready(function() {
+        $(".team-member").hover(
+            function() { // On hover
+                $(this).find(".social-icons").show();
+            }, function() { // On hover out
+                $(this).find(".social-icons").hide();
+            }
+        );
+    });
+    </script>
 </body>
 </html>

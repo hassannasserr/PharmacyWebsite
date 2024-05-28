@@ -893,3 +893,23 @@ section h2 {
 .menu-dropdown:hover .dropbtn {
     background-color: #e9ecef; /* Lighter grey */
 }
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.team-member {
+    text-align: center;
+    width: 30%;
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+}
+
+.team-member h3 {
+    margin-top: 10px;
+    color: var(--maincolor);
+}
